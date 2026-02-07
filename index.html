@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Welfare Awareness Program</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f9f4;
+      color: #333;
+    }
+      header {
+      background: linear-gradient(90deg, #2ecc71, #27ae60);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #1e8449;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 12px 18px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #145a32;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #1e8449;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+    button {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #1e8449;
+    }
+    footer {
+      background: #1e8449;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🐾 Animal Welfare Awareness Program</h1>
+  <p>Promoting kindness, compassion, and responsibility towards animals</p>
+</header>
+
+<nav>
+  <a href="#" onclick="showSection('home')">Home</a>
+  <a href="#" onclick="showSection('issues')">Issues</a>
+  <a href="#" onclick="showSection('laws')">Animal Laws</a>
+  <a href="#" onclick="showSection('help')">How You Can Help</a>
+</nav>
+
+<section id="home" class="active">
+  <h2>What is Animal Welfare?</h2>
+  <p>
+    Animal welfare refers to the humane treatment of animals and ensuring that they live healthy, safe, and dignified lives. 
+    It includes proper food, shelter, medical care, and protection from cruelty or neglect.
+  </p>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Dog" style="width:100%; border-radius:8px;">
+      <p>🐶 Care for stray animals</p>
+    </div>
+    <div class="card">
+      <img src= "https://images.unsplash.com/photo-1500595046743-cd271d694d30"alt="Cow" style="width:100%; border-radius:8px;">
+      <p>🐄 Protection of abandoned cattle</p>
+  
+    
+  </div>
+</section>
+
+<section id="issues">
+  <h2>Major Animal Welfare Issues</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Stray Animals</h3>
+      <p>Many animals suffer due to hunger, disease, and road accidents.</p>
+    </div>
+    <div class="card">
+      <h3>Animal Cruelty</h3>
+      <p>Physical abuse, neglect, and illegal practices cause serious harm.</p>
+    </div>
+    <div class="card">
+      <h3>Lack of Awareness</h3>
+      <p>People are often unaware of laws and basic animal care.</p>
+    </div>
+  </div>
+</section>
+
+<section id="laws">
+  <h2>Animal Protection Laws in India</h2>
+  <ul>
+    <li>Prevention of Cruelty to Animals Act, 1960</li>
+    <li>Animal Welfare Board of India (AWBI) Guidelines</li>
+    <li>Citizens have a duty to show compassion towards animals</li>
+  </ul>
+  <button onclick="alert('Knowing animal laws helps prevent cruelty and saves lives!')">Why Laws Matter</button>
+</section>
+
+<section id="help">
+  <h2>How You Can Help</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8" alt="Feeding animals" style="width:100%; border-radius:8px;">
+      <p>Provide food and water to stray animals</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8" alt="Helping dog" style="width:100%; border-radius:8px;">
+      <p>Report injured animals to rescue organizations</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b" alt="Awareness" style="width:100%; border-radius:8px;">
+      <p>Spread awareness and educate others</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1559070169-a3077159ee16" alt="Volunteering" style="width:100%; border-radius:8px;">
+      <p>Support animal welfare initiatives</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Animal Welfare Awareness Program | College Project</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
